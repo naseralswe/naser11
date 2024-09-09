@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب خدمات المناطق</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- شاشة إدخال كلمة المرور -->
+        <div class="password-screen active">
+            <h1>أدخل كلمة المرور</h1>
+            <form id="passwordForm">
+                <label for="password">كلمة المرور</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور">
+                <input type="submit" value="دخول">
+            </form>
+        </div>
+
+        <!-- شاشة الأرشيف -->
+        <div class="archive-screen">
+            <h1>مكتب خدمات المناطق</h1>
+
+            <!-- نموذج إضافة ملف -->
+            <form id="addFileForm">
+                <label for="fileName">اسم الملف</label>
+                <input type="text" id="fileName" required placeholder="اسم الملف">
+
+                <label for="fileNumber">رقم الملف</label>
+                <input type="number" id="fileNumber" required placeholder="رقم الملف">
+
+                <label for="fileUpload">تحميل ملف PDF</label>
+                <input type="file" id="fileUpload" accept="application/pdf" required>
+
+                <label for="addPassword">كلمة المرور</label>
+                <input type="password" id="addPassword" placeholder="كلمة المرور لإضافة الملف">
+
+                <input type="submit" value="إضافة الملف">
+            </form>
+
+            <!-- نموذج البحث -->
+            <form id="searchForm">
+                <label for="search">البحث عن ملف</label>
+                <input type="text" id="search" placeholder="ابحث باسم الملف أو رقم الملف">
+                <button type="button" onclick="searchFile()">بحث</button>
+            </form>
+
+            <!-- جدول عرض الملفات -->
+            <table id="fileTable">
+                <thead>
+                    <tr>
+                        <th>اسم الملف</th>
+                        <th>رقم الملف</th>
+                        <th>رابط الملف</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- سيتم إضافة الملفات هنا -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
